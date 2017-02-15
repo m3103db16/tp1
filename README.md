@@ -11,6 +11,8 @@ Il faut récupérer le programme dans le chapitre du livre.
  - recopier le programme dans un éditeur
  - executer
  
+ ##UDPclient
+ 
  ````python
  //UDPclient//
  from socket import *
@@ -29,7 +31,9 @@ modifiedMessage, serverAddress = clientSocket.recvfrom(2048)
 print modifiedMessage
 
 clientSocket.close()
-//UDPserver
+```
+##UDPserver
+````python
 
 from socket import *
 
@@ -43,7 +47,6 @@ while 1:
 	message, clientAddress = serverSocket.recvfrom(2048)
 	modifiedMessage = message.upper()
 	serverSocket.sendto(modifiedMessage, clientAddress)
-
 
 ```
 
